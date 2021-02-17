@@ -14,7 +14,7 @@ def today = new Date()
     }
     steps {
       shell('set +x ; ip a | grep inet | awk \'{print $2}\' | grep -v \'127\'')
-      println today
+
     }
     steps {
       shell("echo ${today} Hello World from job-${num}! > /tmp/text")
